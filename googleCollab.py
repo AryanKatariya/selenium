@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-# https://sites.google.com/chromium.org/driver/
 
 service = Service(executable_path="chromedriver.exe")
 driver = webdriver.Chrome(service=service)
@@ -25,7 +24,7 @@ try:
     email_input = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, 'input[type="email"]'))
     )
-    email_input.send_keys('shadydoshita@gmail.com')
+    email_input.send_keys('abc@gmail.com')
 
     next_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, '#identifierNext button'))
